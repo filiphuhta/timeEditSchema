@@ -1,0 +1,154 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html>
+    
+        <head>
+            <style>
+                
+                body{
+                    
+                    background-image: url(https://in8life.com/wp-content/uploads/2016/07/three-ice-cubes.jpg);
+                        background-repeat: no-repeat;
+                }
+            </style>
+            
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+                <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+                <script src="schemaScript.js"></script>
+                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"crossorigin="anonymous"></script>
+                <script src="https://code.jquery.com/jquery-3.4.1.js">         
+                </script>
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	</head >
+   	<body> 
+           
+         <div class="jumbotron " style='background-image: url(https://in8life.com/wp-content/uploads/2016/07/three-ice-cubes.jpg)'>
+    <h1 style="font-size: 30px">Schemahanterare Luleå tekniska univeristet</h1> 
+   
+    <p style="font-size: 12px">Hämta en Schema-länk från timeedit för önskat kurstillfälle. Nedan kan du sedan lägga in längen och skicka in tiderna i Canvas.<h4> 
+  </div>
+            
+            <div  class="card shadow-lg  bg-light rounded"  >
+            
+           
+          
+            
+            <div class="card bg-light" >
+    <div class="card-header bg-light " >
+         <div class="control-label col-md-3  " >
+               <br>
+               <h4>TimeEdit-länk</h4>   
+            <input type="text" class="form-control " id="kurstillfalle" >
+               <br>	
+            <button style="background-color: #002266" type="button" onclick="loadSchema()" class="btn btn-secondary">Hämta schema</button>
+            </div>
+        <h2 id="kurs" class="kurs"></h2>
+        
+        </div>
+                
+                
+     <div class="container col-xl-12 ">
+  <div class="row mx-lg-n5">
+      
+    <div class="col py-3 px-lg-10 border">
+        
+        <table class="table table-bordered col-md-12 table-hover" id="">
+        <thead>
+            <tr style="font-size: 14px">
+                <th>ID</th>
+                <th>Typ</th>
+                <th>Datum</th>
+                <th>Starttid</th>
+                <th>Slutid</th>
+                <th>Beskrivning</th>
+              
+            </tr>
+            
+        </thead>
+        
+        <tbody class="test" id="test">
+            
+        </tbody>
+    </table>
+        
+   </div>
+      
+  <div class="col-5 py-3 px-lg-8 border " style="font-size: 14px">     
+  <form>
+  <div class="form-group">
+    <label class="textarea">ID:  </label><label class="idet" id="idet"></label>
+    <div class="form-group">
+      <label>typ:   </label><label class="typ" id="typ"></label>
+  </div>
+  </div>
+  <div class="form-group">
+    <label>Datum:  </label><label class="datum" id="datum"></label>
+  </div>
+  <div class="form-group">
+      <label>Starttid:   </label><label class="start" id="start"></label>
+  </div>
+  <div class="form-group">
+      <label>Stoptid:   </label><label class="stop" id="stop"></label>
+  </div>
+  <div class="form-group">
+    <label >Beskrivning</label>
+    <textarea class="form-control textarea beskrivning" id="beskrivning" rows="3"></textarea>
+   </div>
+      <div>
+  <button style="background-color: #002266" type="button" id="saveDesc" class="btn btn-secondary saveDesc"  >Spara ändring</button>
+      </div>
+  </div>
+</form>
+          
+          
+          
+          
+      </div>
+  </div>
+</div>
+ 
+    
+                
+    
+</div>
+ 
+        
+  <br>	
+ 
+ <button style="background-color: #002266" onclick="addSchema()"  id="add-schema"  type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#myModal" >
+     Lägg till schema i canvas</button>
+ 
+
+</div>
+   
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+     
+      <div class="modal-body">
+        <h4>Ditt Schema är nu tillagt i Canvas!</h4>
+      </div>
+      <div class="modal-footer">
+        <button style="background-color: #002266" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    </body>
+    
+    
+    
+</html>
